@@ -1,0 +1,3 @@
+click chuot phai git bash here chay file .js
+
+go lech node ten file .js chay

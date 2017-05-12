@@ -1,0 +1,13 @@
+tao file package json
+
+chay/cai cac file con lai
+
+npm install
+
+sau khi hoan thanh duoc file node_modules
+
+tao file viet code app.js
+
+//test port 4499
+
+tao file html
