@@ -1,0 +1,9 @@
+
+npm init
+
+install : express , ejs , body-parser , pg
+
+npm install express ejs body-parser pg
+
+npm install pg
+https://github.com/brianc/node-postgres

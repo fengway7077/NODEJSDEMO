@@ -1,0 +1,36 @@
+
+npm init
+
+npm install express ejs
+
+
+https://www.heroku.com/
+
+
+https://www.youtube.com/watch?v=V3AhnXUKq94&list=PLzrVYRai0riS8p8vCykFGuc-t4LWElV__&index=3
+3video
+
+doing 
+https://dashboard.heroku.com/apps/demotestheroku/deploy/heroku-git
+
+
+
+check error
+
+heroku logs
+
+click your project , create a file named Procfile NO extension 
+
+
+add  1 line    web: node index.js
+
+Deploy your changes  -------lai
+$ git add .
+$ git commit -am "make it better"
+$ git push heroku master
+
+
+sua port 
+app.listen(process.env.PORT || 4499);
+
+redeploy

@@ -1,0 +1,7 @@
+bat POP, IMAP trong gmail gui
+
+npm install nodemailer --save
+https://nodemailer.com/about/
+
+https://www.youtube.com/watch?v=LZ24chCiJBE
+1video

@@ -1,0 +1,9 @@
+
+
+//body-parser nodejs cai de dung post
+https://github.com/expressjs/body-parser
+npm install nody-parser
+
+//cai EJS Template
+
+npm install ejs

@@ -1,0 +1,27 @@
+<% var n=888 ;%>
+<% var m="<font color= blue> BLUE</font>" ;%>
+<% var tuoi=45 ;%>
+<html>
+<head></head>
+<body>
+  <h1>
+      Welcome to nodeijs.from
+      <span style="color:red ; font-weight:bold"> views/ejsdemo.ejs</span>
+  </h1>
+  <h2> <%= n %> </h2><!-- chu y =  viet lien nhau ,dau = bao bat -->
+
+  <h2> <%- m %> </h2>
+  <!--if-->
+<% if(tuoi>=18){ %>
+   <h2> Ban du tuoi</h2>
+<% }else{ %>
+  <h2> ban khong du tuoi </h2>
+<% } %>
+<!--for-->
+<% for(var i=1;i<=5; i++) { %>
+  <h3> khoa hoc  NODEJS - <%= i %></h3>
+<%}%>
+
+
+</body>
+</html>

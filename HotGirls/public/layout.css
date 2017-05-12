@@ -1,0 +1,14 @@
+body{background-color:black}
+#hotgril{width: 500px; margin: auto}
+#hinh12{width: 550px}
+.block{display: block; width: 100%; clear: both}
+a{color: pink;text-decoration: none;
+  padding: 10px
+}
+#truoc{float: left;}
+#sau{float: right;}
+hr{width: 550px}
+
+#like,#unlike{width: 70px}
+#like{float: left;}
+#unlike{float: right;}

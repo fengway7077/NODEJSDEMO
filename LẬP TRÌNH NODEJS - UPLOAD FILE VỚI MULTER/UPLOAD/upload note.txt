@@ -1,0 +1,13 @@
+
+
+
+
+npm install express multer
+
+tim hieu multer nodejs
+https://github.com/expressjs/multer
+
+ npm install --save multer
+
+dung 
+multipart/form-data
