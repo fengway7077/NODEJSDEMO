@@ -1,0 +1,15 @@
+{
+  "name": "demochatsocketio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "\u001b[Asocket io demo",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "socketio",
+    "demo"
+  ],
+  "author": "fengway7077",
+  "license": "ISC"
+}

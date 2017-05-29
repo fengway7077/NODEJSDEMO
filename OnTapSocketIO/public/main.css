@@ -1,0 +1,15 @@
+body{background-color: #d7dfed}
+#warpper{width: 600px;margin: auto}
+#left,#right{min-height: 500px;float: left;margin-top: 15px}
+#left{width: 30%;background-color: #E2A9F3}
+#right{width: 70%;background-color: #A9F5F2}
+.block{width: 100%;clear: both}
+#txtMessage,#btnChat{float:left;margin: 3px}
+#txtMessage{width: 70%}
+#btnChat{width: 26%}
+h1{text-align: center}
+h2{background-color: pink;text-align: center;}
+#title{background-color: blue;text-align: center;padding: 5px}
+.hoten{color: blue; font-weight: bold;}
+
+#dsMsg{height: 450;overflow: scroll;clear: both;}

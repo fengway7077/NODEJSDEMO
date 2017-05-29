@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HEllO SOCKET IO</title>
+     <script src="/socket.io/socket.io.js"> </script>
+     <script src="jquery-3.2.1.min.js"> </script>
+<!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     //kiem tra cdn co bi chet ko
+     <script>
+        //  window.socket.io || document.write("<script src='\/socket.io\/socket.io.js'><\/script>"); //SU DUNG \ DE / HIEN
+         window.jQuery || document.write("<script src='jquery-3.2.1.min.js'><\/script>"); //SU DUNG \ DE / HIEN
+     </script>
+  -->
+   <script>
+     var socket = io("http://localhost:3000");
+     socket.on("server-send-dangky-thatbai", function(data){
+          alert("User " + data +  "   is not availble!!");
+     });
+
+      socket.on("server-send-dangky-thanhcong", function(data){
+      //  alert("ok");
+         var s = "<div socketid ='"+data.id+"' class= 'motUser'>" + data.username + "</div> ";
+        $("#danhsachUserOnline").append(s);
+        //hide form dang ky username
+      ////  $("#txtUser").hide(1000);
+      ////  $("#btnDangKy").hide(1000);
+      });
+    //chat
+    socket.on("server_gui_message", function(data){
+      var hoten  = "<span class='hoten'>" + data.Username + " : </span>";
+      var msg = "<span class ='msg'>" + data.msg + "</span>";
+      $("#dsMsg").append(hoten +  msg + "<div class = 'block'></div>");
+    });
+    ////
+    //xu ly click user
+    socket.on("server_xuly_chocgheo", function(data){
+      alert(data + " : Ve nha cho con bu di! :D");
+    });
+    ////
+     $(document).ready(function(){
+       /*alert("jquery test") */
+       $("#btnDangKy").click(function(){
+         socket.emit("client_gui_username", $("#txtUser").val());
+        });
+        //chat
+        $("#btnChat").click(function(){
+          socket.emit("client_gui_message", $("#txtMessage").val());
+          $("#txtMessage").val(""); //chat xong xoa
+        });
+        ////
+        //xu ly click user
+        $(document).on("click",".motUser", function (){
+          var id = $(this).attr("socketid");
+         //  alert(id);//test  socketid
+         socket.emit("user-chocgheo-socketid-khac", id);
+        });
+        ////
+    });
+    </script>
+    <link rel="stylesheet" type="text/css" href="main.css"/>
+    </head>
+  <body>
+    <h1>CHAT DUNG SOCKET IO</h1>
+    <div id="wrapper">
+      <input type="text" id="txtUser" placeholder="User Name"/>
+      <input type="button" id="btnDangKy" value="Dang Ky"/>
+      <div class=".block"> </div>
+      <div id="left">
+        <div id="title">USER ONLINE</div>
+        <div id ="danhsachUserOnline"></div>
+      </div>
+      <div id="right">
+       <div id = "dsMsg"></div>
+        <div class="block"></div>
+        <input type="text" id="txtMessage" placeholder="Message..."/>
+        <input type="button" id="btnChat" value="Chat"/>
+
+      </div>
+    </div>
+
+  </body>
+</html>
