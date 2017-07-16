@@ -1,0 +1,7 @@
+
+npm init
+
+cai 4 module
+
+npm install express ejs requset cheeiro
+

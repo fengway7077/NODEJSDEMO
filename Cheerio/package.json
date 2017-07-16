@@ -1,0 +1,15 @@
+{
+  "name": "gethtml",
+  "version": "1.0.0",
+  "description": "lay html tu web site khac",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "get",
+    "html"
+  ],
+  "author": "fengway7077",
+  "license": "ISC"
+}
